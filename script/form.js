@@ -13,20 +13,26 @@ if (name === ""|| name === " " )
     if(fail)
         alert(fail);
     else
+        //form.submit();
+        sendRequest(form);
         alert("Ваш заказ принят!");
-sendRequest(form);
+
 }
 
 function sendRequest(form) {
   const url = 'http://localhost:3005/mail';
   const request = new XMLHttpRequest();
   request.open('POST', url, true);
+  request.setRequestHeader('Content-Type', 'application/json');
   request.onload = function() {
     console.log(request.responseText);
   };
   request.onerror = function() {
     console.log('err req');
   };
-
-  request.send(new FormData(form));
+  let object = {};
+  new FormData(form).forEach(function(value, key){
+    object[key] = value;
+  });
+  request.send(JSON.stringify(object));
 }
