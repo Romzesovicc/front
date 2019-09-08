@@ -1,0 +1,24 @@
+.container{
+    margin-left: 500px ;
+}
+.btn {
+    text-decoration: none;
+    outline: none;
+    display: inline-block;
+    padding: 15px 30px;
+    border-radius: 20px;
+    box-shadow: 0 0 40px 40px #F137A6 inset, 0 0 0 0 #F137A6;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: white;
+    transition: .15s ease-in-out;
+}
+.btn:hover {
+    box-shadow: 0 0 10px 0 #F137A6 inset, 0 0 10px 4px #F137A6;
+    color: #F137A6;
+}
+.card {
+    box-shadow: 0 0 10px rgba(0,0,0,0.5); /* Параметры тени */
+    padding: 10px;
+}
