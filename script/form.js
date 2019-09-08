@@ -1,4 +1,4 @@
-function valid (form){
+function valid (form) {
 let fail = false;
 let name = form.fullname.value;
 let phone = form.phone.value;
@@ -14,4 +14,5 @@ if (name === ""|| name === " " )
         alert(fail);
     else
         alert("Ваш заказ принят!");
+form.submit();
 }
