@@ -14,5 +14,19 @@ if (name === ""|| name === " " )
         alert(fail);
     else
         alert("Ваш заказ принят!");
-form.submit();
+sendRequest(form);
+}
+
+function sendRequest(form) {
+  const url = 'http://localhost:3005/mail';
+  const request = new XMLHttpRequest();
+  request.open('POST', url, true);
+  request.onload = function() {
+    console.log(request.responseText);
+  };
+  request.onerror = function() {
+    console.log('err req');
+  };
+
+  request.send(new FormData(form));
 }
