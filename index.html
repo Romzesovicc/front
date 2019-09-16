@@ -5,37 +5,55 @@
     <title>Квас</title>
     <meta name="keywords" content="" />
     <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Amatic+SC&display=swap" rel="stylesheet"/>
     <link rel="stylesheet" type="text/css" href="assets/style.css"/>
+    <link rel="stylesheet" type="text/css" href="assets/media.css" media="all and (max-width:900px)"/>
+    <script src="script/openMenu.js"></script>
+    <script src="https://kit.fontawesome.com/021900f236.js"></script>
 </head>
 <body>
 
 <header  class="page-header">
-    <div class="center">
+    <ul id="slides">
+        <li class="slide showing"></li>
+        <li class="slide"></li>
+        <li class="slide"></li>
+        <li class="slide"></li>
+        <li class="slide"></li>
+    </ul>
+    <script src="script/slider.js"></script>
         <div class="header-top">
-            <div class="logo"><img src="img/logo.png" alt="logo"></div>
-            <div class="main-menu">
-                <a href="#">Language</a>
-                <a href="#">Production</a>
-                <a href="#">Assortment</a>
-                <a href="#">About Us</a>
+            <div class="menu-block" id="scroll" >
+
+                <nav class="menu-nav" id="nav" onscroll="scroll()">
+                    <a href="#"></a>
+                    <a href="#assortment"><i class="fas fa-carrot"></i>Ассортимент</a>
+                    <a href="#about Us"><i class="fas fa-address-card"></i>О нас</a>
+                    <a href="#history"><i class="fas fa-history"></i>История</a>
+                    <a href="#"><i class="fas fa-address-book"></i>Контакты</a>
+                    <a href="#"><i class="fas fa-sign-language"></i>Язык</a>
+                    <a href="#"><i class="fas fa-shopping-basket"></i>Корзина</a>
+                </nav>
+                <script src="script/scroll.js"></script>
+                <a href="#" class="menu-btn" id="btn1" onclick="openMenu()"  >
+                    <span></span>
+                </a>
+
+            </div>
+            <div class="logo">
+                <img src="./img/logo.png" alt="Logo">
             </div>
         </div>
-    </div>
+
     <div class="header-promo center">
-        <p class="p-promo">Крафтовый квас<br> всему голова!</p>
-        <p class="p-promo hidden">Крафтовый квас<br> всему голова, а некоторым и тело!</p>
-        <p class="p-promo hidden">Крафтовый квас<br> всему голова, а хлеб тоже!</p>
+        <p class="p-promo">Крафтовый квас</p>
+        <p class="p-promo">всему голова!</p>
+
     </div>
-    <div class="slider center">
-        <ul class="slider-menu center">
-            <li  class="slide"><a href="#"></a></li>
-            <li class="slide"><a href="#"></a></li>
-            <li  class="slide"><a href="#"></a></li>
-        </ul>
-        <script src="script/slider_click.js"></script>
-    </div>
+
 </header>
+
 <main class="new-sale center">
     <h2>Новинки</h2>
     <div class="new-item">
@@ -50,12 +68,38 @@
             </tr>
         </table>
         <p class="sost">Ржаной хлеб, Вода, Солод, Соль</p>
-        <img src="img/bottle-left.jpg" alt="">
+        <div class="img">
+             <img src="img/bottle-left.jpg" alt="Вахтер" class="scale">
+        </div>
+
+        <div class ="center1">
         <h3>Вахтёр</h3>
-        <p class="ptop">Терпкий и мощный, вкус этого кваса взбодрит после тяжёлого дня и придаст сил для вечерних приключений!</p>
-        <a class="btn1" href="">Подробнее</a>
-        <a class="btn2" href="">Купить</a>
-        <b>150 р.</b>
+        <p class="ptop">Терпкий и мощный, вкус этого кваса взбодрит после тяжёлого дня<br>
+            и придаст сил для вечерних приключений!</p>
+<div class="btn_center">
+    <div>
+            <a class="button" href="#">
+                <span class="button__line button__line--top"></span>
+                <span class="button__line button__line--right"></span>
+                <span class="button__line button__line--bottom"></span>
+                <span class="button__line button__line--left"></span>
+                Подробнее
+            </a>
+    </div>
+    <div>
+            <a class="button" href="form.html">
+                <span class="button__line button__line--top"></span>
+                <span class="button__line button__line--right"></span>
+                <span class="button__line button__line--bottom"></span>
+                <span class="button__line button__line--left"></span>
+                Купить
+            </a>
+
+    </div>
+        </div>
+            <p class="value">150 &#8372</p>
+        </div>
+
     </div>
     <div class="new-item">
         <table>
@@ -69,15 +113,94 @@
             </tr>
         </table>
         <p class="sost">Ржаной хлеб, Вода, Солод, Соль</p>
-        <img src="img/bottle-right.jpg" alt="">
-        <h3>Романтик</h3>
-        <p class="ptop">Терпкий и мощный, вкус этого кваса взбодрит после тяжёлого дня и придаст сил для вечерних приключений!</p>
-        <a class="btn1" href="">Подробнее</a>
-        <a class="btn2" href="">Купить</a>
-        <b>90 р.</b>
-    </div>
+        <img src="img/bottle-right.jpg" alt="Романтик" class="scale">
+        <div class="center">
+             <h3>Романтик</h3>
+                 <p class="ptop">Терпкий и мощный, вкус этого кваса
+                     взбодрит после тяжёлого дня и придаст сил для вечерних приключений!</p>
+            <div class="btn_center">
+                <div>
+                <a class="button" href="#">
+                    <span class="button__line button__line--top"></span>
+                    <span class="button__line button__line--right"></span>
+                    <span class="button__line button__line--bottom"></span>
+                    <span class="button__line button__line--left"></span>
+                    Подробнее
+                </a>
+                </div>
+                <div>
+                <a class="button" href="form.html">
+                    <span class="button__line button__line--top"></span>
+                    <span class="button__line button__line--right"></span>
+                    <span class="button__line button__line--bottom"></span>
+                    <span class="button__line button__line--left"></span>
+                    Купить
+                </a>
+
+                </div>
+
+            </div>
+            <p class="value">90 &#8372</p>
+        </div>
+         </div>
 </main>
-<a id="manufacture"></a>
+
+<a id="assortment"></a>
+<div class="stock center">
+    <div class="wrapper">
+        <div class="blur"></div>
+        <div class="inner-wrapper">
+    <h2>Ассортимент</h2>
+    <table class="scale">
+        <tr>
+            <th>Название</th>
+            <th>Алк.</th>
+            <th>Ккал</th>
+            <th>Объём</th>
+            <th>Стоимость</th>
+        </tr>
+        <tr>
+            <td>Классика</td>
+            <td>&lt; 1.2%</td>
+            <td>33</td>
+            <td>330 мл</td>
+            <td>120 &#8372</td>
+        </tr>
+        <tr>
+            <td>Шабаш</td>
+            <td>&gt; 1.2%</td>
+            <td>45</td>
+            <td>330 мл</td>
+            <td>260 &#8372</td>
+        </tr>
+        <tr>
+            <td>Вахтёр <sup>Новинка</sup></td>
+            <td>&lt; 1%</td>
+            <td>35</td>
+            <td>0.5 л</td>
+            <td>150 &#8372</td>
+        </tr>
+        <tr>
+            <td>Романтик  <sup>Новинка</sup></td>
+            <td>&lt; 0.5%</td>
+            <td>27</td>
+            <td>0.5 л</td>
+            <td>90 &#8372</td>
+        </tr>
+    </table>
+            <div class="buy">
+
+                <ul >
+                    <li><a href="form.html">Заказать</a></li>
+                </ul>
+
+            </div>
+    </div>
+    </div>
+
+</div>
+
+   <a id="manufacture"></a>
 <div class="advantages">
     <ul class="center">
         <li>
@@ -98,18 +221,23 @@
     </ul>
 </div>
 <a id="history"></a>
-<div class="history center">
+    <div class="history">
+
     <h2>Немного истории</h2>
     <table class="table">
         <tr>
             <td>
                 <h3>Происхождение кваса</h3>
             </td>
-            <td><i>Источник: <a target="_blank" href="https://ru.wikipedia.org/wiki/%D0%9A%D0%B2%D0%B0%D1%81">ru.wikipedia.org</a></i></td>
+            <td><i><b>Источник:</b> <a target="_blank" href="https://ru.wikipedia.org/wiki/%D0%9A%D0%B2%D0%B0%D1%81">
+                ru.wikipedia.org</a></i>
+            </td>
         </tr>
         <tr>
             <td>
-                <p>Квас на Руси появился в X-XI веке. Само слово &laquo;квас&raquo; тоже имеет древнерусское происхождение. Помимо России квас готовят в Белоруссии, Сербии, Македонии, Словакии и многих других странах, но называется он везде одинаково &mdash; квас.</p>
+                <p>Квас на Руси появился в X-XI веке. Само слово &laquo;квас&raquo; тоже имеет древнерусское происхождение.
+                    Помимо России квас готовят в Белоруссии, Сербии, Македонии, Словакии и многих других странах,
+                    но называется он везде одинаково &mdash; квас.</p>
             </td>
             <td><img src="img/wiki-1.png" alt="" ></td>
         </tr>
@@ -117,96 +245,64 @@
             <td>
                 <h3>Классификация кваса</h3>
             </td>
-            <td><i>Источник: <a target="_blank" href="https://ru.wikipedia.org/wiki/%D0%9A%D0%B2%D0%B0%D1%81#%D0%9A%D0%BB%D0%B0%D1%81%D1%81%D0%B8%D1%84%D0%B8%D0%BA%D0%B0%D1%86%D0%B8%D1%8F">ru.wikipedia.org</a></i></td>
+            <td><i><b>Источник:</b> <a target="_blank" href="https://ru.wikipedia.org/wiki
+            /%D0%9A%D0%B2%D0%B0%D1%81#%D0%9A%D0%BB%D0%B0%D1%81%D1%81%D0%B8%D1%84%D0%B8%D0%BA%D0%B0%D1%86%D0%B8%D1%8F">
+                ru.wikipedia.org</a></i></td>
         </tr>
         <tr>
             <td>
-                <p>По российскому ГОСТу для промышленного изготовления &mdash; это напиток с объёмной долей этилового спирта не более 1,2%, изготовленный в результате незавершённого спиртового и молочнокислого брожения сусла.</p>
+                <p>По российскому ГОСТу для промышленного изготовления &mdash; это напиток с объёмной долей этилового спирта
+                    не более 1,2%, изготовленный в результате незавершённого спиртового и молочнокислого брожения
+                    сусла.</p>
             </td>
             <td><img src="img/wiki-2.png" alt=""></td>
         </tr>
     </table>
 </div>
+
+<a id="about Us"></a>
 <div class="press-block">
-    <div class="press center">
+    <div class="press">
         <h2>Пресса о нас</h2>
-        <p class="presspost">Сегодня мы провели дегустацию чего-то действительно новенького &mdash; крафтового кваса. Да, да, вы не ослышались! Спасибо Арсену и Руслану за то, что предоставили целую бочку своего напитка!</p>
-        <a class="btn" href="">Читать далее</a>
-        <p class="cite">Газета столичный Cтольник</p>
-    </div>
-</div>
-<a id="assortment"></a>
-<div class="stock center">
-    <h2>Ассортимент</h2>
-    <table>
-        <tr>
-            <th>Название</th>
-            <th>Алк.</th>
-            <th>Ккал</th>
-            <th>Объём</th>
-            <th>Стоимость</th>
-        </tr>
-        <tr>
-            <td>Классика</td>
-            <td>&lt; 1.2%</td>
-            <td>33</td>
-            <td>330 мл</td>
-            <td>120 Р.</td>
-        </tr>
-        <tr>
-            <td>Шабаш</td>
-            <td>&gt; 1.2%</td>
-            <td>45</td>
-            <td>330 мл</td>
-            <td>260 Р.</td>
-        </tr>
-        <tr>
-            <td>Вахтёр <sup>Новинка</sup></td>
-            <td>&lt; 1%</td>
-            <td>35</td>
-            <td>0.5 л</td>
-            <td>150 Р.</td>
-        </tr>
-        <tr>
-            <td>Романтик  <sup>Новинка</sup></td>
-            <td>&lt; 0.5%</td>
-            <td>27</td>
-            <td>0.5 л</td>
-            <td>90 Р.</td>
-        </tr>
-    </table>
-</div>
+        <p class="presspost">Сегодня мы провели дегустацию чего-то действительно новенького &mdash; крафтового кваса.
+            Да, да, вы не ослышались! Спасибо Арсену и Руслану за то, что предоставили целую бочку своего напитка!</p>
+        <div class="buy">
 
-    <div class="buy">
-        <ul >
-            <li><a href="form.html">Заказать</a></li>
-        </ul>
-    </div>
-
-<footer class="footer">
-<div class="page-footer">
-    <div class="footer-top center">
-        <img class="footer-logo" src="img/logo.png" alt="КВАСТ">
-        <div class="footer-menu center">
-            <ul class="nav-menu">
-                <li><a href="#history">История</a></li>
-                <li><a href="#manufacture">Производство</a></li>
-                <li><a href="#assortment">Ассортимент</a></li>
-                <li><a href="#">Где купить</a></li>
+            <ul >
+                <li><a href="#">Читать дальше</a></li>
             </ul>
-        </div>
-    </div>
-    <div class="footer-bottom">
-        <div class="footer-bottom2">
-            <div class="footer-social">
-                <a class="social-btn" href="#"><img src="img/logoinst.png" alt="Инстаграм"></a>
-                <a class="social-btn" href="#"><img src="img/logoface.png" alt="Фейсбук"></a>
-                <a class="social-btn" href="#"><img src="img/logovk.png" alt="Вконтакте"></a>
-            </div>
 
+        </div>
+        <div class="newspaper">
+        <p>Газета столичный Cтольник</p>
         </div>
     </div>
 </div>
+
+<footer class="container">
+    <div class="logo-footer">
+        <img src="./img/logo.png" alt="Logo">
+    </div>
+        <ul class="social">
+            <li class="social__item facebook">
+                <i class="fab fa-facebook-f"></i>
+            </li>
+            <li class="social__item vk">
+                <i class="fab fa-vk"></i>
+            </li>
+            <li class="social__item twitter">
+                <i class="fab fa-twitter"></i>
+            </li>
+            <li class="social__item instagram">
+                <i class="fab fa-instagram"></i>
+            </li>
+            <li class="social__item whatsapp">
+                <i class="fab fa-whatsapp"></i>
+            </li>
+        </ul>
+    <div class="quality">
+    <p> © Quality Ukraine 2019  </p>
+    </div>
 </footer>
  </body>
 </html>

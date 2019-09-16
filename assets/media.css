@@ -1,0 +1,28 @@
+#slides {
+    height:530px;
+    width:900px;
+}
+.logo{
+    display:none;
+}
+.menu-block{
+    display:none;
+}
+.header-promo {
+    bottom: 600px;
+}
+@media all and (max-width: 1920px){
+    .logo{
+        display:none;
+    }
+    .menu-block{
+        display:none;
+    }
+}
+
+@media all and (max-width: 768px){
+    #slides{
+        height:330px;
+        width:630px;
+}
+    }

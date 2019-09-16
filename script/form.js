@@ -4,7 +4,7 @@ let name = form.fullname.value;
 let phone = form.phone.value;
 let email = form.email.value;
 let adr_pattern = /[0-9a-z_-]+@[0-9a-z_-]+\.[a-z]{2,5}/i;
-if (name === ""|| name === " " )
+if (name === ""|| name === " " || name.length < 3 )
     fail = "Вы не ввели свое имя";
     else if(phone ==="")
         fail = "Вы не ввели номер телефона";
@@ -13,11 +13,14 @@ if (name === ""|| name === " " )
     if(fail)
         alert(fail);
     else
+
         //form.submit();
         sendRequest(form);
-        alert("Ваш заказ принят!");
-
+    window.location.href = 'form_ok.html';
 }
+
+
+
 
 function sendRequest(form) {
   const url = 'http://localhost:3005/mail';

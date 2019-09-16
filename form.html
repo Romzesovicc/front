@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <title>Form</title>
@@ -10,6 +10,7 @@
     <script src="script/form.js"></script>
 </head>
 <body>
+<div class="center_form">
 <div class="container">
     <div class="row">
         <div class="col-5">
@@ -45,8 +46,11 @@
                         <div class="form-group">
                            <label for="size">Объем заказа:</label>
                            <select  id="size" class="form-control" name="amount">
-                             <option>От 5 до 10 баррелей в неделю</option>
-                               <option>От 5 до 100 баррелей в неделю</option>
+                             <option>Вахтер</option>
+                               <option>Романтик</option>
+                               <option>Шабаш</option>
+                               <option>Классика</option>
+
                            </select>
                         </div>
                         <div>
@@ -57,17 +61,24 @@
                             <input type="checkbox" class="form-check-input" id="myCheckbox" name="news">
                             <label for="myCheckbox" class="form-check-label">Я согласен получать квасную рассылку</label>
                         </div>
-                        <div class="btn_1 text-center">
-                            <input type="button" class="btn btn-success text-center" value="Отправить"
-                                   onclick="valid(document.getElementById('form'))"
-                            >
+                        <div class="center_btn">
+                        <div >
+                            <ul >
+                                <li><a href="index.html" class="buy">Назад</a></li>
+                            </ul>
                         </div>
+                            <div class="btn_1 text-center">
+                                <input type="button" class="buy text-center" value="Отправить"
+                                       onclick="valid(document.getElementById('form'))" >
+                            </div>
+
+                            </div>
                     </form>
                 </div>
             </div>
         </div>
-
     </div>
+</div>
 </div>
 </body>
 </html>
