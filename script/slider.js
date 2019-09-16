@@ -1,4 +1,4 @@
-let slides = document.querySelectorAll('#slides .slide');
+let slides = document.querySelectorAll('.slider .slide');
 let currentSlide = 0;
 let slideInterval = setInterval(nextSlide,9000);
 
