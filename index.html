@@ -6,17 +6,56 @@
     <meta content="" name="keywords"/>
     <meta content="" name="description"/>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <link href="https://fonts.googleapis.com/css?family=Amatic+SC&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css?family=Caveat&display=swap" rel="stylesheet">
     <link href="assets/style.css" rel="stylesheet" type="text/css"/>
     <link href="assets/media.css" media="all and (max-width:900px)" rel="stylesheet" type="text/css"/>
     <script src="script/openMenu.js"></script>
+    <script src="script/openMenuTelephone.js"></script>
     <script src="https://kit.fontawesome.com/021900f236.js"></script>
     <script src="script/slider.js" defer></script>
-    <script src="script/scroll.js" defer></script>
-</head>
-<body>
+    <script src="script/parallax.js" defer></script>
 
-<header class="page-header">
+
+
+</head>
+<body onscroll="scroll()" >
+
+<header class="page-header" >
+    <div class="header-top">
+        <div class="logo">
+            <img alt="Logo" src="./img/logo.png">
+        </div>
+        <div class="menu-block">
+            <nav class="menu-nav" id="nav" >
+                <a href="#assortment"><i class="fas fa-carrot"></i>Ассортимент</a>
+                <a href="#about Us"><i class="fas fa-address-card"></i>О нас</a>
+                <a href="#history"><i class="fas fa-history"></i>История</a>
+                <a href="#"><i class="fas fa-address-book"></i>Контакты</a>
+                <a href="#"><i class="fas fa-sign-language"></i>Язык</a>
+                <a href="#"><i class="fas fa-shopping-basket"></i>Корзина</a>
+            </nav>
+            <a class="menu-btn toggle-btn" href="#" id="btn1" onclick="openMenu()">
+                <span></span>
+            </a>
+        </div>
+        <div id ="sidebar">
+            <div class="openMenu" onclick="openMenuTelephone()" >
+                <a href="#" class="toggle-btn" id="btn_1">
+                    <span></span>
+                </a>
+            </div>
+            <ul class="main-menu">
+                <li>Меню</li>
+                <li><a href="#assortment"><i class="fas fa-carrot"></i>Ассортимент</a></li>
+                <li><a href="#about Us"><i class="fas fa-address-card"></i>О нас</a></li>
+                <li><a href="#history"><i class="fas fa-history"></i>История</a></li>
+                <li><a href="#"><i class="fas fa-address-book"></i>Контакты</a></li>
+                <li><a href="#"><i class="fas fa-sign-language"></i>Язык</a></li>
+                <li><a href="#"><i class="fas fa-shopping-basket"></i>Корзина</a></li>
+            </ul>
+        </div>
+
+    </div>
     <ul class="slider">
         <li class="slide showing"></li>
         <li class="slide"></li>
@@ -25,38 +64,33 @@
         <li class="slide"></li>
     </ul>
 
-    <div class="header-top">
-        <div class="logo">
-            <img alt="Logo" src="./img/logo.png">
-        </div>
-        <div class="menu-block" id="scroll">
-            <nav class="menu-nav" id="nav" onscroll="scroll()">
-                <a href="#"></a>
-                <a href="#assortment"><i class="fas fa-carrot"></i>Ассортимент</a>
-                <a href="#about Us"><i class="fas fa-address-card"></i>О нас</a>
-                <a href="#history"><i class="fas fa-history"></i>История</a>
-                <a href="#"><i class="fas fa-address-book"></i>Контакты</a>
-                <a href="#"><i class="fas fa-sign-language"></i>Язык</a>
-                <a href="#"><i class="fas fa-shopping-basket"></i>Корзина</a>
-            </nav>
 
-            <a class="menu-btn" href="#" id="btn1" onclick="openMenu()">
-                <span></span>
-            </a>
 
-        </div>
-    </div>
-
-    <div class="header-promo center">
+    <div class="header-promo">
         <p class="p-promo">Крафтовый квас</p>
         <p class="p-promo">всему голова!</p>
 
     </div>
 </header>
 
-<main class="new-sale center">
-    <h2>Новинки</h2>
+<main class="new-sale">
+
+    <div class="center2">
+      <h2 id="text_show" >
+          <span>Н</span>
+          <span>о</span>
+          <span>в</span>
+          <span>и</span>
+          <span>н</span>
+          <span>к</span>
+          <span>и</span>
+       </h2>
+    </div>
+    <div class="new-item_center">
+
     <div class="new-item">
+        <div class="new-item_table-left">
+            <div>
         <table>
             <tr>
                 <td>Алк.</td>
@@ -66,15 +100,18 @@
                 <td>Ккал:</td>
                 <td>35</td>
             </tr>
+
         </table>
-        <p class="sost">Ржаной хлеб, Вода, Солод, Соль</p>
+            </div>
+        </div>
+        <p class="sost1">Ржаной хлеб, Вода, Солод, Соль</p>
         <div class="img">
-            <img alt="Вахтер" class="scale" src="img/bottle-left.jpg">
+            <img alt="Вахтер" class="scale" src="img/bottle-left.png">
         </div>
 
-        <div class="center1">
+        <div>
             <h3>Вахтёр</h3>
-            <p class="ptop">Терпкий и мощный, вкус этого кваса взбодрит после тяжёлого дня<br>
+            <p class="ptop">Терпкий и мощный, вкус этого кваса взбодрит после тяжёлого дня
                 и придаст сил для вечерних приключений!</p>
             <div class="btn_center">
                 <div>
@@ -102,6 +139,8 @@
 
     </div>
     <div class="new-item">
+        <div class="new-item_table-right">
+            <div>
         <table>
             <tr>
                 <td>Алк.</td>
@@ -112,9 +151,13 @@
                 <td>27</td>
             </tr>
         </table>
-        <p class="sost">Ржаной хлеб, Вода, Солод, Соль</p>
-        <img alt="Романтик" class="scale" src="img/bottle-right.jpg">
-        <div class="center">
+            </div>
+        </div>
+          <p class="sost">Ржаной хлеб, Вода, Солод, Соль</p>
+        <div class="img">
+             <img alt="Романтик" class="scale" src="img/bottle-right.png">
+        </div>
+        <div>
             <h3>Романтик</h3>
             <p class="ptop">Терпкий и мощный, вкус этого кваса
                 взбодрит после тяжёлого дня и придаст сил для вечерних приключений!</p>
@@ -143,11 +186,11 @@
             <p class="value">90 &#8372</p>
         </div>
     </div>
-</main>
+    </div>
 
+</main>
 <a id="assortment"></a>
-<div class="stock center">
-    <div class="wrapper">
+<div class="stock">
         <div class="blur"></div>
         <div class="inner-wrapper">
             <h2>Ассортимент</h2>
@@ -189,76 +232,70 @@
                 </tr>
             </table>
             <div class="buy">
-
                 <ul>
                     <li><a href="form.html">Заказать</a></li>
                 </ul>
-
             </div>
         </div>
     </div>
 
-</div>
 
 <a id="manufacture"></a>
 <div class="advantages">
-    <ul class="center">
+    <ul>
         <li>
             <img alt="" src="img/pic1.png">
             <h3>Варим сами</h3>
-            <p>Вот этими самыми руками. Экспериментируем и творим, что хотим.</p>
+            <p>Вот этими самыми руками. Экспериментируем<br> и творим, что хотим.</p>
         </li>
         <li>
             <img alt="" src="img/pic2.png">
             <h3>Своё, родное</h3>
-            <p>Не заработка ради, а импортозамещения для. Поднимаем производство.</p>
+            <p>Не заработка ради, а импортозамещения для.<br> Поднимаем производство.</p>
         </li>
         <li>
             <img alt="" src="img/pic3.png">
             <h3>Не экономим</h3>
-            <p>Человек это то, что он ест и пьет. У нас только качественные ингридиенты.</p>
+            <p>Человек это то, что он ест и пьет. У нас только<br> качественные ингридиенты.</p>
         </li>
     </ul>
 </div>
 <a id="history"></a>
-<div class="history">
 
+<div class="history">
+    <div data-speed="10" class="layer layer-bg"></div>
+    <div data-speed="40" class="layer layer-1"></div>
+    <div data-speed="80" class="layer layer-2"></div>
     <h2>Немного истории</h2>
     <table class="table">
         <tr>
             <td>
                 <h3>Происхождение кваса</h3>
             </td>
-            <td><i><b>Источник:</b> <a href="https://ru.wikipedia.org/wiki/%D0%9A%D0%B2%D0%B0%D1%81" target="_blank">
-                ru.wikipedia.org</a></i>
-            </td>
+
         </tr>
         <tr>
             <td>
                 <p>Квас на Руси появился в X-XI веке. Само слово &laquo;квас&raquo; тоже имеет древнерусское
                     происхождение.
-                    Помимо России квас готовят в Белоруссии, Сербии, Македонии, Словакии и многих других странах,
+                    Помимо Украины квас готовят в Белоруссии, Сербии, Македонии, Словакии и многих других странах,
                     но называется он везде одинаково &mdash; квас.</p>
             </td>
-            <td><img alt="" src="img/wiki-1.png"></td>
+            <td></td>
         </tr>
         <tr>
             <td>
                 <h3>Классификация кваса</h3>
-            </td>
-            <td><i><b>Источник:</b> <a href="https://ru.wikipedia.org/wiki
-            /%D0%9A%D0%B2%D0%B0%D1%81#%D0%9A%D0%BB%D0%B0%D1%81%D1%81%D0%B8%D1%84%D0%B8%D0%BA%D0%B0%D1%86%D0%B8%D1%8F"
-                                       target="_blank">
-                ru.wikipedia.org</a></i></td>
+
         </tr>
         <tr>
             <td>
-                <p>По российскому ГОСТу для промышленного изготовления &mdash; это напиток с объёмной долей этилового
+                <p>По украинскому ГОСТу для промышленного изготовления &mdash; этот напиток с объёмной долей этилового
                     спирта
                     не более 1,2%, изготовленный в результате незавершённого спиртового и молочнокислого брожения
                     сусла.</p>
             </td>
-            <td><img alt="" src="img/wiki-2.png"></td>
+            <td></td>
         </tr>
     </table>
 </div>
@@ -306,6 +343,8 @@
     <div class="quality">
         <p> © Quality Ukraine 2019 </p>
     </div>
+    <script src="script/scrollTelephone.js" defer></script>
+    <script src="script/scroll.js" defer></script>
 </footer>
 </body>
 </html>

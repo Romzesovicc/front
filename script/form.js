@@ -12,11 +12,12 @@ if (name === ""|| name === " " || name.length < 3 )
          fail = "Вы ввели email неправильно";
     if(fail)
         alert(fail);
-    else
+    else {
 
         //form.submit();
         sendRequest(form);
-    window.location.href = 'form_ok.html';
+        window.location.href = 'form_ok.html';
+    }
 }
 
 
