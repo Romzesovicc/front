@@ -124,10 +124,14 @@
 /*press-block*/
 
 .new-sale h2{
+    left:-70%;
     letter-spacing: 0;
 }
 
 /*inner-wrapper*/
+.stock{
+    transform: skewY(0deg);
+}
 
 .stock th:first-child, .stock td:first-child{
     width:0;
@@ -135,11 +139,31 @@
 .stock th:nth-child(5), .stock td:nth-child(5){
     width:0;
 }
-.inner-wrapper table{
-
+.inner-wrapper {
+    transform: skewY(0deg);
 }
 
-/*footer*/
+/* advantages*/
+
+.advantages{
+
+    transform: skewY(0deg);
+}
+.advantages ul{
+    transform: skewY(0deg);
+    width: 100%;
+    height: 100vh;
+    top:80px;
+}
+
+.advantages li{
+
+    padding: 0;
+}
+.inner-wrapper .scale:hover{
+    transform: none;
+}
+    /*footer*/
 
 .social__item{
 margin:auto;
@@ -149,17 +173,125 @@ margin:auto;
 padding-bottom: 20px;
 }
 
+@media all and (max-width: 720px){
+    .center2 h2{
+        font-size: 50px;
+    }
+}
+@media all and (max-width: 520px){
+    .header-promo {
+        font-size: 70px;
+    }
+}
+
 @media all and (max-width: 480px){
 .new-item {
     width:100%;
 }
+    .press h2{
+        font-size: 50px;
+    }
     .img{
         margin-left:0;
     }
+    .press .buy ul{
+        padding:0;
+    }
+    .newspaper {
+    margin:0;
+    }
+    .center2 h2{
+        font-size: 40px;
+    }
+}
+
+@media all and (max-width: 380px) {
+    .header-promo {
+        font-size: 45px;
+
+    }
+    #sidebar.active{
+        left:-20px;
+    }
+    .center2 h2{
+        font-size: 10vw;
+    }
+    .img img {
+        width: 70%;
     }
 
-@media all and (max-width: 380px){
-    .img img{
-     width:70%;
+    .inner-wrapper h2 {
+        font-size: 10vw;
+    }
+.advantages ul{
+    height: 130vh;
+}
+    .stock th{
+        font-size:5vw;
+    }
+    .inner-wrapper  .buy ul{
+        padding:0;
+    }
+    .stock th:nth-of-type(4),
+    .stock td:nth-of-type(4){
+        display:none;
+    }
+    .stock table tr{
+        font-size:4vw;
+        line-height: 0;
+
+    }
+    .stock td sup{
+        display:none
+    }
+    .press h2{
+        font-size: 15vw;
+    }
+    }
+.buy a {
+    letter-spacing: 0;
+}
+
+@media all and (max-width: 280px){
+    #sidebar {
+        width:150px;
+        left:-155px;
+    }
+    .toggle-btn{
+        width: 40px;
+        height: 40px;
+        left:155px;
+    }
+    #sidebar.active{
+        left:-20px;
+    }
+
+}
+
+@media all and (max-width: 240px) {
+    .header-promo {
+        font-size: 20px;
+        text-transform: uppercase ;
+    }
+    .advantages ul{
+        height: 120vh;
+    }
+
+    .btn_center  a{
+        padding:10px 5px;
+        letter-spacing: 0;
+        font-size:20px;
+    }
+    .new-item h3{
+        font-size:30px;
+    }
+    .new-item table{
+        font-size: 10px;
+        width: 0;
+    }
+}
+@media all and (max-width: 180px){
+    .header-top{
+        display:none;
     }
 }

@@ -1,5 +1,8 @@
+body{
+    min-height: 100vh;
+}
 .container{
-    margin-left: 500px ;
+
 }
  a, .buy {
     text-decoration: none;
