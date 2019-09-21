@@ -15,7 +15,7 @@
     border-radius: 5px;
     background: rgba(208,199,199, 0.5);
     width:250px;
-    position: absolute;
+    position: fixed;
     height:400px;
     left:-260px;
     -moz-transiton: all 600ms;
@@ -145,21 +145,23 @@
 
 /* advantages*/
 
-.advantages{
+.advantages {
 
     transform: skewY(0deg);
 }
 .advantages ul{
     transform: skewY(0deg);
     width: 100%;
-    height: 100vh;
     top:80px;
 }
-
-.advantages li{
-
+.advantages li {
+    border-right:none;
+    width:200px;
+    height: 200px;
     padding: 0;
 }
+
+
 .inner-wrapper .scale:hover{
     transform: none;
 }
@@ -173,9 +175,16 @@ margin:auto;
 padding-bottom: 20px;
 }
 
+
+
 @media all and (max-width: 720px){
     .center2 h2{
         font-size: 50px;
+    }
+    .advantages li {
+        border-right:none;
+        width:200px;
+        height: 200px;
     }
 }
 @media all and (max-width: 520px){
@@ -202,6 +211,9 @@ padding-bottom: 20px;
     }
     .center2 h2{
         font-size: 40px;
+    }
+    .btn_center .buy a{
+        margin:0;
     }
 }
 
@@ -250,6 +262,55 @@ padding-bottom: 20px;
     }
 .buy a {
     letter-spacing: 0;
+}
+@media all and (max-width: 412px), (max-height: 732px) {
+    .header-promo {
+        bottom: 190px;
+    }
+    .toggle-btn {
+        width: 40px;
+        height: 40px;
+    }
+}
+@media all and (max-width: 412px), (max-height: 824px){
+    .header-promo {
+        bottom: 250px;
+    }
+    .toggle-btn {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+@media all and (max-width: 376px), (max-height: 668px) {
+    .header-promo {
+        bottom: 190px;
+    }
+    .toggle-btn {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+@media all and (max-width: 330px), (max-height: 569px) {
+    .header-promo {
+        bottom: 120px;
+    }
+
+    .toggle-btn {
+        width: 40px;
+        height: 40px;
+    }
+}
+@media all and (max-width: 376px), (max-height: 813px) {
+    .header-promo {
+        bottom: 250px;
+    }
+
+    .toggle-btn {
+        width: 40px;
+        height: 40px;
+    }
 }
 
 @media all and (max-width: 280px){
