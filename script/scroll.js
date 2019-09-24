@@ -16,11 +16,4 @@
            document.getElementById('text_show').style.visibility = 'visible';
          }, 500);
        }
-
-     //check in mobile mode
-
-     if(scrollValue > previousScroll)
-         document.getElementById("sidebar").classList.add('remove');
-     else
-         document.getElementById("sidebar").classList.remove('remove');
  };

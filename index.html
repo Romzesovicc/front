@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html lang="ru">
+<html lang="ru" class="scroll">
 <head>
     <meta charset="utf-8"/>
     <title>Квас</title>
@@ -17,12 +17,13 @@
     <script src="script/scroll.js" defer></script>
 
 </head>
-<body onscroll="scroll()" >
+<body onscroll="scroll()">
 
-<header class="page-header" >
+<header class="page-header">
+    <div class="blur-header"></div>
     <div class="header-top">
         <div class="logo">
-            <img alt="Logo" src="./img/logo.png">
+            <a href="index.html"><img alt="Logo" src="./img/logo.png"></a>
         </div>
         <div class="menu-block">
             <nav class="menu-nav" id="nav" >
@@ -31,29 +32,27 @@
                 <a href="#history"><i class="fas fa-history"></i>История</a>
                 <a href="#"><i class="fas fa-address-book"></i>Контакты</a>
                 <a href="#"><i class="fas fa-sign-language"></i>Язык</a>
-                <a href="#"><i class="fas fa-shopping-basket"></i>Корзина</a>
+                <a href="form.html"><i class="fas fa-shopping-basket"></i>Корзина</a>
             </nav>
             <a class="menu-btn toggle-btn" href="#" id="btn1" onclick="openMenu()">
                 <span></span>
             </a>
         </div>
+        <div class="openMenu" onclick="openMenuTelephone()" >
+            <a href="#" class="toggle-btn" id="btn_1">
+                <span></span>
+            </a>
+        </div>
         <div id ="sidebar">
-            <div class="openMenu" onclick="openMenuTelephone()" >
-                <a href="#" class="toggle-btn" id="btn_1">
-                    <span></span>
-                </a>
-            </div>
             <ul class="main-menu">
-                <li>Меню</li>
                 <li><a href="#assortment"><i class="fas fa-carrot"></i>Ассортимент</a></li>
                 <li><a href="#about Us"><i class="fas fa-address-card"></i>О нас</a></li>
                 <li><a href="#history"><i class="fas fa-history"></i>История</a></li>
                 <li><a href="#"><i class="fas fa-address-book"></i>Контакты</a></li>
                 <li><a href="#"><i class="fas fa-sign-language"></i>Язык</a></li>
-                <li><a href="#"><i class="fas fa-shopping-basket"></i>Корзина</a></li>
+                <li><a href="form.html"><i class="fas fa-shopping-basket"></i>Корзина</a></li>
             </ul>
         </div>
-
     </div>
     <ul class="slider">
         <li class="slide showing"></li>
@@ -62,12 +61,9 @@
         <li class="slide"></li>
         <li class="slide"></li>
     </ul>
-
-
-
     <div class="header-promo">
-        <p class="p-promo">Крафтовый квас</p>
-        <p class="p-promo">всему голова!</p>
+        <p class="p-promo">Крафтовый квас<br>
+            всему голова!</p>
 
     </div>
 </header>

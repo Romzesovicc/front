@@ -1,65 +1,83 @@
 /*header*/
+.blur-header {
+    display: block;
+    width: 100%;
+    height: 50px;
+    background: rgba(0,0,0,0.8);
+    backdrop-filter: saturate(180%) blur(20px);
+    position: fixed;
+    z-index: 3;
+}
+    .header-top{
+    width: 100%;
+    top:0;
+    position:fixed;
+    z-index: 3;
+
+}
 
 .page-header {
     width: 100%;
 }
-.logo {
-    display:none;
+
+.logo{
+    margin-top: 5px;
+    z-index: 6;
+}
+
+.header-top .logo img{
+    width:60px;
+    height: 40px;
 }
 .menu-block {
     display:none;
 }
 #sidebar{
-    display: block;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
     z-index:5;
-    border-radius: 5px;
-    background: rgba(208,199,199, 0.5);
-    width:250px;
+    background: black ;
+    width:100%;
     position: fixed;
-    height:400px;
-    left:-260px;
+    top:-100%;
+    height:100vh;
     -moz-transiton: all 600ms;
     -webkit-transiton:all 600ms;
     transition: all 600ms;
 
 }
 #sidebar.active{
-    left:20px;
+    top:0;
 }
-#sidebar.remove{
-    left:-260px;
-}
-#sidebar ul li:first-child {
-    text-align:center;
-    font-size:3.95em;
-    list-style: none;
-    color:white;
-    margin-bottom:40px;
-}
+
 .main-menu {
-    padding:0;
+    width: 100%;
+}
+
+
+.main-menu li{
+    width:90%;
+    border-bottom: 1px solid rgba(208,199,199, 0.5);
+    padding:20px 20px 20px 0;
+}
+
+.openMenu {
+    display: block;
 }
 .main-menu i{
     padding-right: 10px;
 }
 
-#sidebar ul li:not(:first-child) {
-    width:90%;
-    margin-left:10%;
-    list-style: none;
-    padding:10px;
-
-}
 .toggle-btn {
+    margin-top: 5px;
+    z-index: 6;
     display:block;
     width:50px;
     height:50px;
     position:relative;
-    left:270px;
-    border-radius:50%;
     cursor:pointer;
-    background: rgba(208,199,199, 0.5);
-
+    vertical-align: middle;
 }
 
 .toggle-btn span,
@@ -69,8 +87,8 @@
     top: 50%; margin-top: -1px;
     left: 50%; margin-left: -10px;
     width: 20px;
-    height: 2px;
-    background:rgba(0, 0, 0, 0.7);
+    height: 0.1rem;
+    background:white;
 
 }
 .toggle-btn span::before,
@@ -88,20 +106,17 @@
 .openMenu a::after{
     display:none ;
 }
-#sidebar .toggle-btn:hover{
-    background: rgba(128, 121, 121, 0.7);
-}
 
 .toggle-btn:hover span::before,
 .toggle-btn:hover span::after,
 .toggle-btn:hover span {
-    background: #fafafa;
+    background: rgba(128, 121, 121, 0.7);
 }
 .toggle-btn_active span::before,
 .toggle-btn_active span::after,
 .toggle-btn_active span
 {
-    background:rgba(186, 6, 15, 0.5);
+    background:red;
 }
 .toggle-btn_active span:before {
     transform: rotate(45deg);
@@ -187,10 +202,29 @@ padding-bottom: 20px;
         height: 200px;
     }
 }
+
+@media all and (max-width: 732px), (max-height: 412px){
+    #sidebar .main-menu li{
+        padding: 15px 0 15px 0;
+    }
+}
+
+@media all and (max-width: 641px), (max-height: 361px){
+    #sidebar .main-menu li{
+        padding: 8px 0 8px 0;
+    }
+}
+
 @media all and (max-width: 520px){
     .header-promo {
         font-size: 70px;
     }
+}
+
+@media all and (max-width: 569px), (max-height: 321px){
+#sidebar .main-menu li{
+    padding: 8px 0 8px 0;
+}
 }
 
 @media all and (max-width: 480px){
@@ -215,16 +249,17 @@ padding-bottom: 20px;
     .btn_center .buy a{
         margin:0;
     }
+
 }
 
 @media all and (max-width: 380px) {
+
+
     .header-promo {
         font-size: 45px;
 
     }
-    #sidebar.active{
-        left:-20px;
-    }
+
     .center2 h2{
         font-size: 10vw;
     }
@@ -235,7 +270,7 @@ padding-bottom: 20px;
     .inner-wrapper h2 {
         font-size: 10vw;
     }
-.advantages ul{
+    .advantages ul{
     height: 130vh;
 }
     .stock th{
@@ -264,18 +299,14 @@ padding-bottom: 20px;
     letter-spacing: 0;
 }
 @media all and (max-width: 412px), (max-height: 732px) {
-    .header-promo {
-        bottom: 190px;
-    }
+
     .toggle-btn {
         width: 40px;
         height: 40px;
     }
 }
 @media all and (max-width: 412px), (max-height: 824px){
-    .header-promo {
-        bottom: 250px;
-    }
+
     .toggle-btn {
         width: 40px;
         height: 40px;
@@ -283,9 +314,7 @@ padding-bottom: 20px;
 }
 
 @media all and (max-width: 376px), (max-height: 668px) {
-    .header-promo {
-        bottom: 190px;
-    }
+
     .toggle-btn {
         width: 40px;
         height: 40px;
@@ -293,19 +322,12 @@ padding-bottom: 20px;
 }
 
 @media all and (max-width: 330px), (max-height: 569px) {
-    .header-promo {
-        bottom: 120px;
-    }
-
     .toggle-btn {
         width: 40px;
         height: 40px;
     }
 }
 @media all and (max-width: 376px), (max-height: 813px) {
-    .header-promo {
-        bottom: 250px;
-    }
 
     .toggle-btn {
         width: 40px;
@@ -313,22 +335,15 @@ padding-bottom: 20px;
     }
 }
 
-@media all and (max-width: 280px){
-    #sidebar {
-        width:150px;
-        left:-155px;
-    }
-    .toggle-btn{
-        width: 40px;
-        height: 40px;
-        left:155px;
-    }
-    #sidebar.active{
-        left:-20px;
+@media all and (max-width: 250px){
+    #sidebar ul li a {
+        font-size: 12px;
     }
 
+    #sidebar li{
+width: 95%;
+    }
 }
-
 @media all and (max-width: 240px) {
     .header-promo {
         font-size: 20px;
@@ -354,9 +369,7 @@ padding-bottom: 20px;
         padding: 0 5px 0 5px;
 
     }
-}
-@media all and (max-width: 180px){
-    .header-top{
-        display:none;
+    .main-menu {
+        padding-left: 0;
     }
 }

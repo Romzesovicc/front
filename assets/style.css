@@ -1,6 +1,9 @@
-
 @import
 url(https://fonts.googleapis.com/css?family=Finger+Paint);
+
+.no_scroll{
+    overflow: hidden !important;
+}
 
 body {
     font: 12px/18px Arial, Tahoma, Verdana, sans-serif;
@@ -49,11 +52,18 @@ h3 {
 }
 
 /* header */
-
+.blur-header {
+    display:none;
+}
 .logo {
     margin-left:20px;
     z-index: 2;
 }
+
+.header-top .logo a::after{
+    background:none;
+}
+
 .header-top {
     position:absolute;
     top:60px;
@@ -61,6 +71,7 @@ h3 {
     width: 100%;
     display: flex;
     justify-content: space-between;
+
 }
 
 .menu-btn {
@@ -113,10 +124,11 @@ h3 {
 
 .menu-block {
    display:flex;
-    margin-right: 20px;
-    width:800px;
+      margin-right: 50px;
 }
-
+.openMenu {
+    display: none;
+}
 .menu-nav a {
     font-weight: 100;
     margin-right: 15px;
@@ -179,12 +191,12 @@ h3 {
     content: "";
     opacity: 0;
     width: 0;
-    height:1px;
+    height:0.05rem;
     position: absolute;
     background-color: #FFFF00;
     left:50%;
     bottom:-5px;
-    z-index:9999;
+    z-index:5;
     display:block;
     -webkit-transition: width .3s ease-in-out;
     -moz-transition: width .3s ease-in-out;
@@ -203,11 +215,16 @@ h3 {
     opacity: 1;
 }
 .header-promo  {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
     z-index:2;
     text-align:center;
     width: 100%;
-    position: absolute;
-    bottom: 260px;
+    height: 100vh;
+    top:0;
+   position: absolute;
     color: lightgoldenrodyellow;
     font-size: 100px;
     font-weight: bold;
@@ -692,13 +709,17 @@ padding-top:10px;
                  0 18px 23px rgba(0,0,0,0.1);
 }
 .history h3 {
-    font-size:25px;
+    font-size:30px;
 }
 .history p {
-    font-size:20px;
+    font-size:25px;
+    color:black;
+
 }
 
+
 .table{
+
     text-shadow: 0 4px 3px rgba(0,0,0,0.4),
     0 8px 13px rgba(0,0,0,0.1),
     0 18px 23px rgba(0,0,0,0.1);
@@ -709,22 +730,8 @@ padding-top:10px;
 
 }
 
-.table td:first-child {
-
-    padding-left:100px;
-
-
-
-}
-
-.table td:last-child {
-
-
-}
-
 .table a {
     color: #894A03;
-
 }
 
 /*press*/
@@ -838,7 +845,6 @@ padding-top:10px;
 }
 .inner-wrapper {
     transform: skewY(4.5deg);
-    z-index: 100;
     color: #fff;
     text-align: center;
     text-shadow: 0 0 5px rgba(0,0,0,.5);
@@ -846,7 +852,6 @@ padding-top:10px;
 
 .blur {
     overflow: hidden;
-    z-index: 99;
     background-image: url('../img/6.jpg');
     filter: blur(4px) ;
     background-size: cover;
