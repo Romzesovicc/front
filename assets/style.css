@@ -81,7 +81,9 @@ h3 {
     background-color: black;
     border-radius: 50%;
     position: relative;
+
 }
+
 .menu-btn span,
 .menu-btn span::before,
 .menu-btn span::after {
@@ -111,7 +113,11 @@ h3 {
 }
 .menu-btn_active span:after {
     transform: rotate(45deg);
-
+}
+.menu-btn:hover span::before,
+.menu-btn:hover span::after,
+.menu-btn:hover span {
+    background: rgba(128, 121, 121, 0.7);
 }
 .menu-btn_active span{
 
@@ -320,9 +326,7 @@ h3 {
     z-index: 2;
 }
 
-/*
-Второстепенные стили
-*/
+
 .slide:nth-of-type(1) {
     background: url(../img/pole.jpg) no-repeat;
     background-size: cover;
@@ -361,6 +365,103 @@ h3 {
 }
 
 
+.sound_button {
+    display: flex;
+    justify-content: flex-end;
+    position:relative;
+    bottom: 60px;
+    right: 40px;
+    z-index: 6;
+}
+
+#sound {
+    transform: rotate(360deg);
+}
+
+.spread-bar-sound {
+    display: block;
+}
+
+.btn-icon {
+    font-size: 14px;
+}
+.btn-icon {
+    background:none;
+    border: none;
+    font-size: 11px;
+    min-height: 30px;
+    min-width: 30px;
+    padding: 0;
+    cursor:pointer;
+-moz-transformrotate(-90deg);
+    -webkit-transform: rotate(-90deg);
+    -moz-user-select: none;
+    -webkit-user-select: none;
+
+}
+
+.sound-toggle-bar{
+    display:block;
+    float:left;
+    width:2px;
+    height:21px;
+    margin-right:4px;
+    background:rgba(255,255,255,0.6);
+    -webkit-transform:scale(1, 0.1);
+    transform: scale(1, 0.1);
+    -webkit-transform-origin:bottom;
+    transform-origin:bottom;
+}
+.playing .sound-toggle-bar {
+    -webkit-animation:sound-toggle 2s infinite;
+    animation:sound-toggle 2s infinite;
+    background:rgba(255,255,255,0.6);
+}
+
+.playing .sound-toggle-bar:nth-child(2){
+    -webkit-animation-delay:1.2s;
+    animation-delay:1.2s;
+    background:rgba(255,255,255,0.6);
+}
+.playing .sound-toggle-bar:nth-child(3){
+    -webkit-animation-delay: .3s;
+    animation-delay: .3s;
+    background:rgba(255,255,255,0.6);
+}
+.playing .sound-toggle-bar:nth-child(4) {
+    -webkit-animation-delay:1.7s;
+    animation-delay:1.7s;
+    background:rgba(255,255,255,0.6);
+}
+
+.playing .sound-toggle-bar:nth-child(5) {
+    -webkit-animation-delay:.4s;
+    animation-delay: .4s;
+    background:rgba(255,255,255,0.6);
+}
+
+@keyframes sound-toggle {
+    0% {
+        -webkit-transform:scale(1, 0.1);
+        transform:scale(1, 0.1)
+    }
+    25% {
+        -webkit-transform:scale(1, 1);
+        transform:scale(1, 1)
+    }
+    50% {
+        -webkit-transform:scale(1, 0.3);
+        transform:scale(1, 0.3)
+    }
+    75% {
+        -webkit-transform:scale(1, 0.6);
+        transform:scale(1, 0.6)
+    }
+    100% {
+        -webkit-transform:scale(1, 0.1);
+        transform:scale(1, 0.1)
+    }
+}
 /* new-sale */
 
 /*animate text new*/
@@ -1038,4 +1139,3 @@ color:white;
     box-shadow: 0 0 35px #bc2a8d;
     color:#bc2a8d;
 }
-

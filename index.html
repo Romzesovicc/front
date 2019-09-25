@@ -15,11 +15,17 @@
     <script src="script/slider.js" defer></script>
     <script src="script/parallax.js" defer></script>
     <script src="script/scroll.js" defer></script>
-
+    <script src="script/play_click.js" defer></script>
+    <script src="script/sound_playing.js" defer></script>
 </head>
 <body onscroll="scroll()">
-
 <header class="page-header">
+    <audio id="mySoundClip">
+        <source src="audio/ButtonClick_softer_02_160314_115653.mp3" type="audio/mp3">
+    </audio>
+    <audio id="mySound" autoplay>
+        <source src="audio/MASTER.mp3" type="audio/mp3">
+    </audio>
     <div class="blur-header"></div>
     <div class="header-top">
         <div class="logo">
@@ -34,12 +40,12 @@
                 <a href="#"><i class="fas fa-sign-language"></i>Язык</a>
                 <a href="form.html"><i class="fas fa-shopping-basket"></i>Корзина</a>
             </nav>
-            <a class="menu-btn toggle-btn" href="#" id="btn1" onclick="openMenu()">
+            <a class="menu-btn toggle-btn" href="#" id="btn1" onclick="openMenu()" onmouseover="mysound.play()" >
                 <span></span>
             </a>
         </div>
-        <div class="openMenu" onclick="openMenuTelephone()" >
-            <a href="#" class="toggle-btn" id="btn_1">
+        <div class="openMenu" onclick="openMenuTelephone()"  >
+            <a href="#" class="toggle-btn" id="btn_1" onmouseover="mysound.play()" >
                 <span></span>
             </a>
         </div>
@@ -64,7 +70,15 @@
     <div class="header-promo">
         <p class="p-promo">Крафтовый квас<br>
             всему голова!</p>
-
+    </div>
+    <div class="sound_button">
+    <button type="button" id="sound" class="btn-icon sound-toggle spread-bar-sound playing" onclick="sound_playing()" >
+        <i class="sound-toggle-bar"></i>
+        <i class="sound-toggle-bar"></i>
+        <i class="sound-toggle-bar"></i>
+        <i class="sound-toggle-bar"></i>
+        <i class="sound-toggle-bar"></i>
+    </button>
     </div>
 </header>
 
